@@ -339,3 +339,42 @@ Este projeto está licenciado sob a MIT License - veja o arquivo [LICENSE](LICEN
 ---
 
 **SkillSync API - Transformando currículos em oportunidades! 🎯**
+
+## 🛠️ Ferramentas de Qualidade e Segurança
+
+Este projeto utiliza ferramentas de análise estática, segurança e formatação para garantir a qualidade do código:
+
+### 🔍 Linting e Formatação
+
+| Ferramenta | Finalidade | Comando |
+|-----------|------------|---------|
+| **Flake8** | Verifica estilo e padrões de código | `flake8 app/` |
+| **Black** | Formata o código automaticamente | `black app/` |
+
+### 🛡️ Segurança
+
+| Ferramenta | Finalidade | Comando |
+|-----------|------------|---------|
+| **Bandit** | Detecta vulnerabilidades no código Python | `bandit -r app/` |
+| **Safety** | Verifica vulnerabilidades nas dependências | `safety check` |
+
+### 📦 Instalação
+
+```bash
+pip install -r requirements-dev.txt
+
+make lint       # Verifica estilo com flake8
+make format     # Formata com black
+make security   # Roda bandit e safety
+
+pip install pre-commit
+pre-commit install
+
+
+Depois:
+
+```bash
+git add README.md
+git commit -m "Documenta ferramentas de análise e segurança"
+git push origin main
+

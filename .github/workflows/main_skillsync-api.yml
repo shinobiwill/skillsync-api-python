@@ -58,4 +58,4 @@ jobs:
         with:
           app-name: 'skillsync-api'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_6B1487E51DBF40E9BD973A2B882C1B5F }}
+          publish-profile: ${{ secrets['AZUREAPPSERVICE_PUBLISHPROFILE_6B1487E51DBF40E9BD973A2B882C1B5F'] }}

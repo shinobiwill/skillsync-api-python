@@ -8,7 +8,7 @@ from datetime import datetime
 
 from app.core.config import settings
 from app.db import init_db
-from app.routers import resumes_v2, jobs, search, matching, notifications, websocket
+from app.routers import resumes_v2, jobs, search, matching, notifications, websocket, ai_optimizer
 
 logging.basicConfig(
     level=getattr(logging, settings.LOG_LEVEL), format=settings.LOG_FORMAT
@@ -104,6 +104,7 @@ app.include_router(search.router)
 app.include_router(matching.router)
 app.include_router(notifications.router)
 app.include_router(websocket.router)
+app.include_router(ai_optimizer.router)
 
 
 @app.get("/")

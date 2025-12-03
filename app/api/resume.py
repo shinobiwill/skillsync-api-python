@@ -1,6 +1,6 @@
 from fastapi import APIRouter, UploadFile, File, Depends
 from sqlalchemy.orm import Session
-from storage import upload_file, generate_sas_for_blob
+from storage import CONTAINER, upload_file, generate_sas_for_blob
 from auth import create_access_token
 
 router = APIRouter()

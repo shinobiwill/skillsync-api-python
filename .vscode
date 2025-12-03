@@ -1,0 +1,29 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Bandit - Segurança de Código",
+      "type": "shell",
+      "command": "bandit -r app/",
+      "group": "build"
+    },
+    {
+      "label": "Safety - Vulnerabilidades em Dependências",
+      "type": "shell",
+      "command": "safety check --full-report",
+      "group": "build"
+    },
+    {
+      "label": "Flake8 - Lint",
+      "type": "shell",
+      "command": "flake8 app/",
+      "group": "build"
+    },
+    {
+      "label": "Black - Formatação",
+      "type": "shell",
+      "command": "black app/",
+      "group": "build"
+    }
+  ]
+}
